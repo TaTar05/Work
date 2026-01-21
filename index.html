@@ -18,93 +18,14 @@
     <!-- เรียกใช้ฟอนต์จาก Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- ===== CSS ===== -->
-    <style>
-        /* กำหนดฟอนต์หลักของทั้งเว็บไซต์ */
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-            /* เลื่อนหน้าแบบนุ่มนวล */
-        }
-        /* ===== เมนูด้านบน ===== */
-        
-        .navbar {
-            background: #111;
-            /* สีพื้นหลังเมนู */
-        }
-        
-        .navbar a {
-            color: #fff !important;
-            /* สีตัวอักษรเมนู */
-            margin-right: 15px;
-        }
-        /* ===== ส่วนหน้าแรก (Hero Section) ===== */
-        
-        .hero {
-            /* พื้นหลังเป็นรูป + ไล่สีดำทับ */
-            background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('img/KSU21363.JPG') center/cover;
-            height: 100vh;
-            /* ความสูงเต็มจอ */
-            color: #fff;
-            display: flex;
-            align-items: center;
-            /* จัดให้อยู่กลางแนวตั้ง */
-        }
-        /* ตัวอักษรหัวข้อใหญ่ */
-        
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 600;
-        }
-        /* ปุ่มหลัก */
-        
-        .btn-main {
-            background: #f9b233;
-            color: #000;
-            border-radius: 30px;
-            padding: 10px 25px;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        /* กำหนดระยะห่างของแต่ละ section */
-        
-        section {
-            padding: 80px 0;
-        }
-        /* หัวข้อของแต่ละ section */
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            font-weight: 600;
-        }
-        /* กล่องทักษะ */
-        
-        .skill-box {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        /* รูปผลงาน */
-        
-        .portfolio img {
-            border-radius: 10px;
-        }
-        /* ส่วนท้ายเว็บ */
-        
-        footer {
-            background: #111;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-    </style>
+    <link rel="icon" type="image/x-icon" href="/img-favicon/favicon.png">
+
+    <!-- เรียกใช้ไฟล์ style.css -->
+    <link rel="stylesheet" href="./Css/style.css">
 </head>
 
 <body>
-    <!-- ===== Navbar (เมนูนำทาง) ===== -->
+    <!-- Navbar (เมนูนำทาง) -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
 
@@ -112,9 +33,7 @@
             <a class="navbar-brand fw-bold" href="#">Portfolio</a>
 
             <!-- ปุ่มเมนูสำหรับมือถือ -->
-            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu"><!-- <span class="navbar-toggler-icon"></span> --></button>
 
             <!-- รายการเมนู -->
             <div class="collapse navbar-collapse" id="menu">
@@ -131,7 +50,7 @@
         </div>
     </nav>
 
-    <!-- ===== หน้าแรก (Hero Section) ===== -->
+    <!-- หน้าแรก (Hero Section เอามาใช้ที่ดูเด่น ) -->
     <section class="hero" id="home">
         <div class="container">
             <h1> Tar <span class="text-warning"> Wongsathon </span></h1>
@@ -144,80 +63,81 @@
         </div>
     </section>
 
-    <!-- ===== เกี่ยวกับเรา ===== -->
+    <!-- เกี่ยวกับเรา -->
     <section id="about">
         <div class="container">
-            <h2 class="section-title">เกี่ยวกับเรา</h2>
+            <h1 class="section-title">เกี่ยวกับเรา</h1>
             <p class="text-center">
-                แนะนำตัวเอง ความสนใจ และเป้าหมายในการทำงาน
+                สวัสดีครับผม นายวงศธร ทั่งทอง ผมเป็นนักศึกษาคอมพิวเตอร์ธุรกิจ มีความสนใจด้านการพัฒนาเว็บไซต์และระบบสารสนเทศ ผมมีเป้าหมายในการเป็น Web Developer ที่สามารถพัฒนาระบบที่ใช้งานได้จริงและเป็นประโยชน์ต่อผู้ใช้ ผมมีความรับผิดชอบ ชอบเรียนรู้สิ่งใหม่ และทำงานร่วมกับผู้อื่นได้ดี
             </p>
         </div>
     </section>
 
-    <!-- ===== ทักษะ ===== -->
+    <!-- ทักษะ -->
+    <!-- Container คือการครอบเนื้อหาเพราะ -->
     <section id="skills" class="bg-light">
         <div class="container">
             <h2 class="section-title">ทักษะ</h2>
 
             <!-- แสดงทักษะเป็นกล่อง -->
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="skill-box">HTML</div>
-                </div>
-                <div class="col-md-3">
-                    <div class="skill-box">CSS</div>
-                </div>
-                <div class="col-md-3">
-                    <div class="skill-box">Bootstrap</div>
-                </div>
-                <div class="col-md-3">
-                    <div class="skill-box">Python</div>
-                </div>
+            <div class="skill-boxes">
+                <div class="skill-box">HTML</div>
+                <div class="skill-box">CSS</div>
+                <div class="skill-box">Bootstrap</div>
+                <div class="skill-box">Python</div>
             </div>
+
         </div>
     </section>
 
-    <!-- ===== การศึกษา ===== -->
+    <!-- การศึกษา -->
     <section id="education">
         <div class="container">
             <h2 class="section-title">การศึกษา</h2>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    ระดับการศึกษา / สาขา / สถาบัน
-                </li>
-            </ul>
+            <div class="d-flex justify-content-center">
+                <img src="img/Powocho.png" alt="powocho" class="" />
+            </div>
+            <div class="text-center">ประกาศนียบัตรวิชาชีพ ระดับปวช</div>
         </div>
     </section>
 
-    <!-- ===== ประสบการณ์ & การฝึกอบรม ===== -->
+    <!-- ประสบการณ์ & การฝึกอบรม -->
     <section id="experience" class="bg-light">
         <div class="container">
             <h2 class="section-title">ประสบการณ์ & การฝึกอบรม</h2>
-            <ul>
-                <li>ฝึกงาน</li>
-                <li>อบรม</li>
-            </ul>
+
+            <img src="img/1T0A6709.JPG" class="img-fluid">
+            <h5>
+                <p class="text-center"><br/>อบรมค่ายพี่ช่วยน้อง เราจะเดินไปด้วยกัน</p>
+            </h5>
+
+
         </div>
     </section>
 
-    <!-- ===== ผลงาน ===== -->
+    <!-- ผลงาน -->
     <section id="portfolio">
         <div class="container">
             <h2 class="section-title">ผลงาน</h2>
 
             <!-- แสดงผลงานเป็นรูป -->
-            <div class="row g-4 portfolio">
+            <div class="portfolio portfolio-center">
                 <div class="col-md-4">
-                    <img src="https://via.placeholder.com/400x250" class="img-fluid">
-                    <p class="mt-2">ชื่อผลงาน</p>
+                    <img src="img/three.jpg" class="img-fluid">
+                    <p class="text-center">รองชนะเลิศอันดับ 2 ในการแข่งขัน Microsoft Power BI <br/>(ACBA 2025)</p>
+                    <img src="img/ww.jpg" class="img-fluid">
+                    <p class="text-center">มอบเกียรติบัตร จิตอาสาช่วยงานส่วนรวม <br/>มีคุณธรรม จริยธรรม เสียสละ</p>
+                    <img src="img/KSU21629.JPG" class="img-fluid">
+                    <p class="text-center">มอบเกียรติบัตรการเข้าร่วม ICDL Asia Digital Challenge 2025</p>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== Footer ===== -->
+    <!-- Footer -->
     <footer>
-        <p>© 2026 Portfolio | ชื่อของคุณ</p>
+        <p>© 2026 Portfolio | Tar Wongsathon</p>
     </footer>
 
     <!-- เรียกใช้ JavaScript ของ Bootstrap -->
